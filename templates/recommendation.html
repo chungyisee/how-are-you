@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Final Recommendations
+{% endblock %}
+
+{% block main %}
+    <h1 class = "questiontext">YOUR RECOMMENDATIONS</h1>
+        <form class = "questionform" action="/recommendation" method="POST">
+            <p class = "recommendationtext">If you ever feel like you need someone to talk with, we recommend talking with some of your closest and most trusted friends, family members, or faculty members!</p>
+
+            {%if ToRecommend %}
+                <p class = "paragraphtext">Thank you for having a conversation with us. Here are some resources we'd like to suggest for you, based on your results:</p>
+
+                <table>
+                <tr>
+                    <th></th>
+                    {% if Room13 %}
+                        <th>Room13</th>
+                    {% endif %}
+                    {% if Contact %}
+                        <th>Contact</th>
+                    {% endif %}
+                    {% if ECHO %}
+                        <th>ECHO</th>
+                    {% endif %}
+                    {% if Indigo %}
+                        <th>Indigo</th>
+                    {% endif %}
+                    {% if Response %}
+                        <th>Response</th>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class = bigger>Focus</td>
+                    {% if Room13 %}
+                        <td>Counseling any and all concerns</td>
+                    {% endif %}
+                    {% if Contact %}
+                        <td>Counseling related to LGBTQ identities, gender, sexuality and relationships</td>
+                    {% endif %}
+                    {% if ECHO %}
+                        <td>Counselling concerns related to eating, exercise and body image</td>
+                    {% endif %}
+                    {% if Indigo %}
+                        <td>Counseling concerns related to socioeconomic status, immigration status, race and other identities</td>
+                    {% endif %}
+                    {% if Response %}
+                        <td>Counseling relationship concerns, including sexual harassment and assault</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class = bigger>Drop-in Hours</td>
+                    {% if Room13 %}
+                        <td>Every night, 7pm-7am</td>
+                    {% endif %}
+                    {% if Contact %}
+                        <td>Every night, 8pm-11pm</td>
+                    {% endif %}
+                    {% if ECHO %}
+                        <td>Sunday-Wednesday, 8pm-11pm</td>
+                    {% endif %}
+                    {% if Indigo %}
+                        <td>Every night, 8pm-12am</td>
+                    {% endif %}
+                    {% if Response %}
+                        <td>Sunday-Wednesday, 8pm-11pm</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class = bigger>Call Hours</td>
+                    {% if Room13 %}
+                        <td>Every night, 7pm-7am</td>
+                    {% endif %}
+                    {% if Contact %}
+                        <td>Every night, 8pm-8am</td>
+                    {% endif %}
+                    {% if ECHO %}
+                        <td>Every night, 8pm-8am</td>
+                    {% endif %}
+                    {% if Indigo %}
+                        <td>Every night, 8pm-8am</td>
+                    {% endif %}
+                    {% if Response %}
+                        <td>Sunday-Wednesday, 8pm-8am</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class = bigger>Location</td>
+                    {% if Room13 %}
+                        <td>Thayer B-09</td>
+                    {% endif %}
+                    {% if Contact %}
+                        <td>Thayer B-04</td>
+                    {% endif %}
+                    {% if ECHO %}
+                        <td>Eliot T-24</td>
+                    {% endif %}
+                    {% if Indigo %}
+                        <td>Thayer B-01</td>
+                    {% endif %}
+                    {% if Response %}
+                        <td>Lowell EL-15</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td class = bigger>Phone Number</td>
+                    {% if Room13 %}
+                        <td>617-495-4969</td>
+                    {% endif %}
+                    {% if Contact %}
+                        <td>617-998-6898</td>
+                    {% endif %}
+                    {% if ECHO %}
+                        <td>617-495-8200</td>
+                    {% endif %}
+                    {% if Indigo %}
+                        <td>617-659-0140</td>
+                    {% endif %}
+                    {% if Response %}
+                        <td>617-999-8353</td>
+                    {% endif %}
+                </tr>
+                </table>
+
+            {% else %}
+
+            <p class = "recommendationtext">Based on our conversation, it seems as though you may not need any specific mental health resources here at Harvard! That being said, Room 13 is a general counseling resource which you can utilize. </p>
+
+            {% endif %}
+
+            <div class="button-group" id = "container">
+                <button type="submit" class="btn btn-primary">Click here for a full list of all resources!</button>
+            </div>
+        </form>
+
+{% endblock %}
+

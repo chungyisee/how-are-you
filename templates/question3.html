@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Question 3
+{% endblock %}
+
+{% block main %}
+    <h1 class = "questiontext">Has anything deviated from your day to day activity?</h1>
+
+        <form class = "questionform" action="/question3" method="POST">
+            <div class="form-group">
+                <label for="InputResponse">Your Response:</label>
+            </div>
+
+            <textarea cols="55" rows="3" name="question_third"></textarea>
+
+            <div class="form-group">
+                <small class="help" class="form-text text-muted">Changes in time spent on meals, friends, exercise, sleep, etc.</small>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Next Question!</button>
+            </div>
+
+        </form>
+
+
+{% endblock %}
+

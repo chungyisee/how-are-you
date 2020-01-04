@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Question 2
+{% endblock %}
+
+{% block main %}
+    <h1 class = "questiontext">Were there any low points you had this month?</h1>
+
+        <form class = "questionform" action="/question2" method="POST">
+            <div class="form-group">
+                <label for="InputResponse">Your Response:</label>
+            </div>
+
+            <textarea cols="55" rows="3" name="question_second"></textarea>
+
+            <div class="form-group">
+                <small class="help" class="form-text text-muted">This could be about academics, extracurriculars, exercise and eating habits, social life, etc.</small>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Next Question!</button>
+            </div>
+
+        </form>
+
+{% endblock %}
+
+

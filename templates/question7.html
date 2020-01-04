@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Question 7
+{% endblock %}
+
+{% block main %}
+    <h1 class = "questiontext">Which aspects of college life is/are most stressful to you?</h1>
+
+        <form class = "questionform" action="/question7" method="POST">
+            <div class="form-group">
+                <label for="InputResponse">Your Response:</label>
+            </div>
+
+            <textarea cols="55" rows="3" name="question_seventh"></textarea>
+
+            <div class="form-group">
+                <small class="help" class="form-text text-muted">This could be financial, social, academic, etc.</small>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">You're done!</button>
+            </div>
+
+        </form>
+
+{% endblock %}
+

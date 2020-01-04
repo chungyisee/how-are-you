@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Question 5
+{% endblock %}
+
+{% block main %}
+    <h1 class = "questiontext">Tell me about the family and/or loved ones you’ve met/talked to this week - how has keeping up with them been? Have there been any recent family troubles?</h1>
+
+        <form class = "questionform" action="/question5" method="POST">
+            <div class="form-group">
+                <label for="InputResponse">Your Response:</label>
+            </div>
+
+            <textarea cols="55" rows="3" name="question_fifth"></textarea>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Next Question!</button>
+            </div>
+
+        </form>
+
+{% endblock %}
+
